@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar'
 import Sidebar from '../components/sidebar/Sidebar'
-import TicketCategorizedTable from '../components/ticketCategorizedTable/ticketCategorizedTable'
+import TicketCategorizedTable from '../components/ticketCategorizedTable/TicketCategorizedTable';
 
-export default function TicketCategorizedTableW() {
+export default function CategorizedTicketTable() {
     const navigate = useNavigate();
 
     useEffect(() => {

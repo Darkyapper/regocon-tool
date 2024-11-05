@@ -17,7 +17,7 @@ import DashAdmTC from './pages/DashAdmTC';
 import DashAddTC from './pages/DashAddTC';
 import TCsEditTC from './pages/TCsEditTC';
 import DashAdmTickets from './pages/DashAdmTickets';
-import TicketCategorizedTableW from './pages/TicketCategorizedTableW';
+import CategorizedTicketTable from './pages/TicketCategorizedTableW';
 import TicketValidation from './pages/TicketValidation';
 import TicketValQR from './pages/TicketValQR';
 import TicketsPrint from './pages/TicketsPrint';
@@ -53,7 +53,7 @@ function App() {
         <Route path="/ticket-categories/add" element={<DashAddTC />} />
         <Route path="/ticket-categories/edit/:id" element={<TCsEditTC />} />
         <Route path="/tickets" element={<DashAdmTickets />} />
-        <Route path="/tickets/categories/:category_id" element={<TicketCategorizedTableW />} />
+        <Route path="/tickets/categories/:category_id" element={<CategorizedTicketTable />} />
         <Route path="/tickets/validate" element={<TicketValidation />} />
         <Route path="/tickets/validate/qr" element={<TicketValQR />} />
         <Route path="/tickets/print" element={<TicketsPrint />} />
