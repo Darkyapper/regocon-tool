@@ -21,7 +21,7 @@ export default function EditEventForm() {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/events/${id}`);
+                const response = await fetch(`https://regcon-back.onrender.com/events/${id}`);
                 const data = await response.json();
                 if (response.ok) {
                     // Asegúrate de que la fecha esté en el formato correcto
@@ -47,7 +47,7 @@ export default function EditEventForm() {
             }
     
             try {
-                const response = await fetch(`http://localhost:3000/ticket-categories?workgroup_id=${workgroupId}`); // Modificar la URL para incluir el workgroup_id
+                const response = await fetch(`https://regcon-back.onrender.com/ticket-categories?workgroup_id=${workgroupId}`); // Modificar la URL para incluir el workgroup_id
                 const data = await response.json();
                 if (response.ok) {
                     setCategories(data.data); // Suponiendo que 'data' contiene la lista de categorías
@@ -72,7 +72,7 @@ export default function EditEventForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/events/${id}`, {
+            const response = await fetch(`https://regcon-back.onrender.com/events/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

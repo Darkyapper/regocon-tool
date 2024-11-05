@@ -23,7 +23,7 @@ export default function WorkgroupMembersTable() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/workgroupdetails/${workgroupId}`); // Cambiar endpoint
+                const response = await fetch(`https://regcon-back.onrender.com/workgroupdetails/${workgroupId}`); // Cambiar endpoint
                 const data = await response.json();
                 if (response.ok) {
                     setMembers(data.data); // Asegúrate de que 'data' contenga la lista de miembros
@@ -53,7 +53,7 @@ export default function WorkgroupMembersTable() {
         const workgroupId = localStorage.getItem('workgroup_id'); // Obtén el workgroup_id
 
         try {
-            const response = await fetch(`http://localhost:3000/membership/${workgroupId}/${memberToDelete}`, {
+            const response = await fetch(`https://regcon-back.onrender.com/membership/${workgroupId}/${memberToDelete}`, {
                 method: 'DELETE',
             });
 

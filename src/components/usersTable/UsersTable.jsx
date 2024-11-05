@@ -22,7 +22,7 @@ export default function UsersTable() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/usersmembership?workgroup_id=${workgroupId}`); // Cambiar endpoint
+                const response = await fetch(`https://regcon-back.onrender.com/usersmembership?workgroup_id=${workgroupId}`); // Cambiar endpoint
                 const data = await response.json();
                 if (response.ok) {
                     setUsers(data.data); // Asegúrate de que 'data' contenga la lista de usuarios
@@ -43,7 +43,7 @@ export default function UsersTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/users/${userToDelete}`, {
+            const response = await fetch(`https://regcon-back.onrender.com/users/${userToDelete}`, {
                 method: 'DELETE',
             });
 

@@ -13,7 +13,7 @@ const EventStatistics = () => {
         const fetchEventStatistics = async () => {
             const workgroupId = localStorage.getItem('workgroup_id');
             try {
-                const response = await fetch(`http://localhost:3000/eventattendancesummary?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://regcon-back.onrender.com/eventattendancesummary?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setEventData(data.data);

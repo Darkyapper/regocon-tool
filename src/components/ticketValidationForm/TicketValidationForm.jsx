@@ -23,7 +23,7 @@ export default function TicketValidationForm() {
 
         try {
             const workgroupId = localStorage.getItem('workgroup_id'); // Obtener el workgroup_id de la sesión
-            const response = await fetch(`http://localhost:3000/ticket-view/${ticketCode}?workgroup_id=${workgroupId}`); // Enviar workgroup_id
+            const response = await fetch(`https://regcon-back.onrender.com/ticket-view/${ticketCode}?workgroup_id=${workgroupId}`); // Enviar workgroup_id
             const data = await response.json();
             console.log("Respuesta de la API:", data); // Agregado para depuración
             if (response.ok) {

@@ -23,7 +23,7 @@ export default function EditRegForm() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/attendance/${id}`); // Cambiado al nuevo endpoint
+                const response = await fetch(`https://regcon-back.onrender.com/attendance/${id}`); // Cambiado al nuevo endpoint
                 const data = await response.json();
                 if (response.ok) {
                     setFormData(data.data);
@@ -37,7 +37,7 @@ export default function EditRegForm() {
 
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:3000/users');
+                const response = await fetch('https://regcon-back.onrender.com/users');
                 const data = await response.json();
                 if (response.ok) {
                     setUsers(data.data);
@@ -58,7 +58,7 @@ export default function EditRegForm() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/events?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://regcon-back.onrender.com/events?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setEvents(data.data);
@@ -84,7 +84,7 @@ export default function EditRegForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/attendance/${id}`, { // Cambiado al nuevo endpoint
+            const response = await fetch(`https://regcon-back.onrender.com/attendance/${id}`, { // Cambiado al nuevo endpoint
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

@@ -24,7 +24,7 @@ export default function RegisterEventForm() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/ticket-categories?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://regcon-back.onrender.com/ticket-categories?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setCategories(data.data);
@@ -53,7 +53,7 @@ export default function RegisterEventForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/events', {
+            const response = await fetch('https://regcon-back.onrender.com/events', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

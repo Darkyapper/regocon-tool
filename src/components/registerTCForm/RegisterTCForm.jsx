@@ -34,7 +34,7 @@ export default function RegisterTCForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/ticket-categories', {
+            const response = await fetch('https://regcon-back.onrender.com/ticket-categories', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
