@@ -17,7 +17,7 @@ import DashAdmTC from './pages/DashAdmTC';
 import DashAddTC from './pages/DashAddTC';
 import TCsEditTC from './pages/TCsEditTC';
 import DashAdmTickets from './pages/DashAdmTickets';
-import CategorizedTicketTable from './pages/TicketCategorizedTableW';
+import CategorizedTicketTable from './pages/CategorizedTicketTable';
 import TicketValidation from './pages/TicketValidation';
 import TicketValQR from './pages/TicketValQR';
 import TicketsPrint from './pages/TicketsPrint';
