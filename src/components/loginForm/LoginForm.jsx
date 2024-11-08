@@ -11,7 +11,7 @@ export default function LoginForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://regcon-back.onrender.com/login', {
+            const response = await fetch('https://recgonback-8awa0rdv.b4a.run/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ export default function EditUserForm() {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await fetch(`https://regcon-back.onrender.com/users/${id}`);
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/users/${id}`);
                 const data = await response.json();
                 if (response.ok) {
                     setFormData(data.data);
@@ -42,7 +42,7 @@ export default function EditUserForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/users/${id}`, {
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/users/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

@@ -29,7 +29,7 @@ export default function RegisterTicketForm() {
 
             try {
                 // Modificar la URL para incluir el workgroup_id
-                const response = await fetch(`https://regcon-back.onrender.com/ticket-categories?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setCategories(data.data); // Cargar categorías de boletos
@@ -77,7 +77,7 @@ export default function RegisterTicketForm() {
                 workgroup_id: workgroup_id // Incluir workgroup_id
             };
             ticketPromises.push(
-                fetch('https://regcon-back.onrender.com/tickets', {
+                fetch('https://recgonback-8awa0rdv.b4a.run/tickets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

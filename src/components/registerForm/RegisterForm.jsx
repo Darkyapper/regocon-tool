@@ -23,7 +23,7 @@ export default function RegisterForm() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('https://regcon-back.onrender.com/users');
+                const response = await fetch('https://recgonback-8awa0rdv.b4a.run/users');
                 const data = await response.json();
                 if (response.ok) {
                     setUsers(data.data);
@@ -44,7 +44,7 @@ export default function RegisterForm() {
             }
 
             try {
-                const response = await fetch(`https://regcon-back.onrender.com/events?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/events?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setEvents(data.data);
@@ -73,7 +73,7 @@ export default function RegisterForm() {
 
     const handleTicketValidation = async () => {
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/tickets/${formData.ticket_code}`);
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/tickets/${formData.ticket_code}`);
             const data = await response.json();
             if (!response.ok || data.data.status !== "Sin Usar") {
                 setModalMessage('Este boleto es inválido o ya ha sido usado.');
@@ -83,7 +83,7 @@ export default function RegisterForm() {
 
             // Verifica que el tipo de boleto sea el correcto para el evento
             if (selectedEvent) {
-                const eventResponse = await fetch(`https://regcon-back.onrender.com/events/${selectedEvent.id}`);
+                const eventResponse = await fetch(`https://recgonback-8awa0rdv.b4a.run/events/${selectedEvent.id}`);
                 const eventData = await eventResponse.json();
 
                 if (eventResponse.ok) {
@@ -126,7 +126,7 @@ export default function RegisterForm() {
             const attendanceData = { ...formData, workgroup_id: workgroupId };
 
             try {
-                const response = await fetch('https://regcon-back.onrender.com/attendance', {
+                const response = await fetch('https://recgonback-8awa0rdv.b4a.run/attendance', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

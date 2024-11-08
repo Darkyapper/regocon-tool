@@ -27,7 +27,7 @@ export default function CreateTicketsReport() {
 
             try {
                 // Modificar la URL para incluir el workgroup_id
-                const response = await fetch(`http://localhost:3000/ticket-view?workgroup_id=${workgroupId}`); 
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-view?workgroup_id=${workgroupId}`); 
                 const data = await response.json();
                 if (response.ok) {
                     setTickets(data.data); // Actualizar para obtener la información de los boletos

@@ -19,7 +19,7 @@ export default function TicketCategorizedTable() {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await fetch(`https://regcon-back.onrender.com/tickets/category/${category_id}`);
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/tickets/category/${category_id}`);
                 const data = await response.json();
                 if (response.ok) {
                     setTickets(data.data);
@@ -40,7 +40,7 @@ export default function TicketCategorizedTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/tickets/${ticketToDelete}`, {
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/tickets/${ticketToDelete}`, {
                 method: 'DELETE',
             });
 

@@ -22,7 +22,7 @@ export default function RegisterTable() {
             }
 
             try {
-                const response = await fetch(`https://regcon-back.onrender.com/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado
                 const data = await response.json();
                 if (response.ok) {
                     setAttendances(data.data); // Suponiendo que 'data' contiene la lista de registros
@@ -43,7 +43,7 @@ export default function RegisterTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/attendance/${attendanceToDelete}`, {
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance/${attendanceToDelete}`, {
                 method: 'DELETE',
             });
 

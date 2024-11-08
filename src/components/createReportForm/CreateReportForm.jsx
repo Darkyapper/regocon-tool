@@ -26,7 +26,7 @@ export default function CreateReportForm() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/usersmembership?workgroup_id=${workgroupId}`); // Llama al endpoint con el workgroup_id
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/usersmembership?workgroup_id=${workgroupId}`); // Llama al endpoint con el workgroup_id
                 const data = await response.json();
                 if (response.ok) {
                     setUsers(data.data); // Suponiendo que 'data' contiene la lista de usuarios

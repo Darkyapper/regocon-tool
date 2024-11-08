@@ -26,7 +26,7 @@ export default function CreateRegReport() {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado para obtener detalles de asistencia
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado para obtener detalles de asistencia
                 const data = await response.json();
                 if (response.ok) {
                     setAttendances(data.data); // Asumiendo que 'data' contiene la lista de asistencias

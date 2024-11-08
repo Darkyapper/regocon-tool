@@ -22,7 +22,7 @@ export default function EventsTable() {
             }
         
             try {
-                const response = await fetch(`https://regcon-back.onrender.com/events?workgroup_id=${workgroupId}`);
+                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/events?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setEvents(data.data); 
@@ -44,7 +44,7 @@ export default function EventsTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/events/${eventToDelete}`, {
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/events/${eventToDelete}`, {
                 method: 'DELETE',
             });
 

@@ -14,7 +14,7 @@ export default function UserProfile() {
     const fetchUserProfile = async () => {
         const workgroupId = localStorage.getItem('workgroup_id'); // Obtener el workgroup_id de la sesión
         try {
-            const response = await fetch(`https://regcon-back.onrender.com/admin/${id}?workgroup_id=${workgroupId}`); // Modificar endpoint para incluir workgroup_id
+            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/admin/${id}?workgroup_id=${workgroupId}`); // Modificar endpoint para incluir workgroup_id
             const data = await response.json();
             if (response.ok) {
                 setUser(data.data); // Almacenar la información del usuario

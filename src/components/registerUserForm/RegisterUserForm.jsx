@@ -18,7 +18,7 @@ export default function RegisterUserForm() {
         e.preventDefault();
         
         try {
-            const response = await fetch('https://regcon-back.onrender.com/users', {
+            const response = await fetch('https://recgonback-8awa0rdv.b4a.run/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
