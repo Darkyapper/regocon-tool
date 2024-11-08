@@ -73,7 +73,6 @@ export default function EventsTable() {
             <table className="min-w-full border-collapse">
                 <thead>
                     <tr>
-                        <th className="border px-4 py-2">ID</th>
                         <th className="border px-4 py-2">Evento</th>
                         <th className="border px-4 py-2">Fecha</th>
                         <th className="border px-4 py-2">Ubicación</th>
@@ -84,7 +83,6 @@ export default function EventsTable() {
                 <tbody>
                     {currentEvents.map(event => (
                         <tr className='events-custom-cs' key={event.id}>
-                            <td className="border px-4 py-2">{event.id}</td>
                             <td className="border px-4 py-2">{event.name}</td>
                             <td className="border px-4 py-2">{new Date(event.event_date).toLocaleDateString()}</td> {/* Formateo de fecha */}
                             <td className="border px-4 py-2">{event.location}</td>

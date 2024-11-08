@@ -67,7 +67,6 @@ export default function CreateRegReport() {
     const addTableToPDF = (doc) => {
         // Modificar para que coincida con los datos de 'attendances'
         const tableData = attendances.map(attendance => [
-            attendance.attendance_id, 
             attendance.user_first_name, 
             attendance.user_last_name, 
             attendance.event_name, 
@@ -77,7 +76,7 @@ export default function CreateRegReport() {
             attendance.registration_date
         ]);
         autoTable(doc, {
-            head: [['ID Asistencia', 'Nombre Usuario', 'Apellido Usuario', 'Evento', 'Código Boleto', 'Boleto', 'Estado de Asistencia', 'Fecha de Registro']],
+            head: [['Nombre Usuario', 'Apellido Usuario', 'Evento', 'Código Boleto', 'Boleto', 'Estado de Asistencia', 'Fecha de Registro']],
             body: tableData,
             startY: 60, // Ajusta la posición de inicio de la tabla
             styles: {

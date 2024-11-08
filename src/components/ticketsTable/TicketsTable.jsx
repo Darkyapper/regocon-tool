@@ -86,7 +86,6 @@ export default function TicketsTable() {
             <table className="min-w-full border-collapse">
                 <thead>
                     <tr>
-                        <th className="border px-4 py-2">ID</th>
                         <th className="border px-4 py-2">Nombre</th>
                         <th className="border px-4 py-2">Cantidad de Boletos</th>
                         <th className="border px-4 py-2">Tipo</th>
@@ -96,7 +95,6 @@ export default function TicketsTable() {
                 <tbody>
                     {currentCategories.map(tc => (
                         <tr key={tc.id}>
-                            <td className="border px-4 py-2">{tc.id}</td>
                             <td className="border px-4 py-2">{tc.name}</td>
                             <td className="border px-4 py-2">{tc.ticket_count}</td>
                             <td className="border px-4 py-2">{tc.description}</td>

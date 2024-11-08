@@ -72,7 +72,6 @@ export default function RegisterTable() {
             <table className="tablas-chinas min-w-full border-collapse">
                 <thead>
                     <tr>
-                        <th className="border px-4 py-2">ID</th>
                         <th className="border px-4 py-2">Nombre</th>
                         <th className="border px-4 py-2">Apellido</th>
                         <th className="border px-4 py-2">Evento</th>
@@ -86,7 +85,6 @@ export default function RegisterTable() {
                 <tbody>
                     {currentAttendances.map(attendance => (
                         <tr key={attendance.attendance_id}>
-                            <td className="border px-4 py-2">{attendance.attendance_id}</td>
                             <td className="border px-4 py-2">{attendance.user_first_name}</td>
                             <td className="border px-4 py-2">{attendance.user_last_name}</td>
                             <td className="border px-4 py-2">{attendance.event_name}</td>

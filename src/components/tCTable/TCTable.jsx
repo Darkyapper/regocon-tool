@@ -96,7 +96,6 @@ export default function TCTable() {
             <table className="min-w-full border-collapse">
                 <thead>
                     <tr>
-                        <th className="border px-4 py-2">ID</th>
                         <th className="border px-4 py-2">Nombre</th>
                         <th className="border px-4 py-2">Precio</th>
                         <th className="border px-4 py-2">Descripción</th>
@@ -106,7 +105,6 @@ export default function TCTable() {
                 <tbody>
                     {currentTicketCategories.map(category => (
                         <tr key={category.id}>
-                            <td className="border px-4 py-2">{category.id}</td>
                             <td className="border px-4 py-2">{category.name}</td>
                             <td className="border px-4 py-2">${category.price}</td>
                             <td className="border px-4 py-2">{category.description}</td>
