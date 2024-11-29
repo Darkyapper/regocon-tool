@@ -8,7 +8,7 @@
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    color: #000;
+    color: #ffffff;
     text-align: center;
     display: flex; /* Usar flex para centrar el contenido */
     flex-direction: column; /* Apilar elementos verticalmente */
@@ -21,7 +21,7 @@
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #131313;
+    color: #ffffff;
     margin: 0;
 }
 .custom-content-ess p {

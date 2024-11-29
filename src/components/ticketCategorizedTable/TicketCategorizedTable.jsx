@@ -77,16 +77,16 @@ export default function TicketCategorizedTable() {
     };
 
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="p-4 bg-[#1F2937] custom-cs-tcta rounded-lg shadow-md">
             <div className="flex justify-between items-center mb-4">
                 <div className="edit-div-cs flex flex-row items-center">
-                    <button className="button-cs mx-1 px-3 py-2 rounded bg-orange-500 text-white hover:text-black" onClick={handleBackClick}>
+                    <button className="button-cs mx-1 px-3 py-2 rounded bg-[#DD8329] text-white hover:text-white" onClick={handleBackClick}>
                         <IoArrowBackOutline />
                     </button>
-                    <h2 className="title-uts">Administrar Boletos por Categorías</h2>
+                    <h2 className="title-uts-tcta">Administrar Boletos por Categorías</h2>
                 </div>
                 <button
-                    className="bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                     onClick={handleAddCategory}
                 >
                     Añadir Boletos
@@ -108,10 +108,10 @@ export default function TicketCategorizedTable() {
                             <td className="border px-4 py-2">{ticket.name}</td>
                             <td className="border px-4 py-2">{ticket.status}</td>
                             <td className="border px-4 py-2">
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-teal-400 text-white hover:text-black" onClick={() => openQrModal(ticket.code)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-[#DD8329] text-white hover:text-white" onClick={() => openQrModal(ticket.code)}>
                                     <FaQrcode />
                                 </button>
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-black" onClick={() => handleDeleteClick(ticket.code)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-white" onClick={() => handleDeleteClick(ticket.code)}>
                                     <FaRegTrashAlt />
                                 </button>
                             </td>
@@ -122,7 +122,7 @@ export default function TicketCategorizedTable() {
             {/* Paginación */}
             <div className="flex justify-center mt-4">
                 {[...Array(Math.ceil(tickets.length / ticketsPerPage))].map((_, index) => (
-                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}>
+                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-gray-200'}`}>
                         {index + 1}
                     </button>
                 ))}
@@ -138,10 +138,10 @@ export default function TicketCategorizedTable() {
             {/* Modal para QR */}
             {modalType === "qr" && selectedTicketCode && (
                 <div className="modal-overlay">
-                    <div className="modal-content">
+                    <div className="modal-content bg-[#1F2937]">
                         <h2 className='mb-2'>Código QR para el Boleto: {selectedTicketCode}</h2>
                         <QrCodeGenerator code={selectedTicketCode} />
-                        <button onClick={() => setModalType(null)} className="close-button"><IoCloseOutline /></button>
+                        <button onClick={() => setModalType(null)} className="close-button-a"><IoCloseOutline /></button>
                     </div>
                 </div>
             )}

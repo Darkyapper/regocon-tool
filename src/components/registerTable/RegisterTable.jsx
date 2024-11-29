@@ -67,8 +67,8 @@ export default function RegisterTable() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="custom-cs p-4 bg-white rounded-lg shadow-md">
-            <h2 className="title-uts">Administrar Asistencias</h2>
+        <div className="custom-cs p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="title-uts-av">Administrar Asistencias</h2>
             <table className="tablas-chinas min-w-full border-collapse">
                 <thead>
                     <tr>
@@ -104,7 +104,7 @@ export default function RegisterTable() {
             {/* Paginación */}
             <div className="flex justify-center mt-4">
                 {[...Array(Math.ceil(attendances.length / attendancesPerPage))].map((_, index) => (
-                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}>
+                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-[#bf7021]'}`}>
                         {index + 1}
                     </button>
                 ))}

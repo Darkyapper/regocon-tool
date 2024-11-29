@@ -7,7 +7,7 @@
 .create-report-form {
     font-family: 'Noto Sans', sans-serif;
     padding: 0.5rem 1.5rem 2rem 1.3rem;
-    background-color: #fff;
+    background-color: #1F2937;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -15,7 +15,7 @@
 .custom-au-title {
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
-    color: #121212;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -32,6 +32,7 @@
 
 .form-report {
     flex-grow: 1; /* Para que el formulario ocupe el espacio restante */
+    background-color: #374151;
 }
 
 .input-group {
@@ -41,7 +42,7 @@
 .input-group label {
     display: block;
     font-size: 14px;
-    color: #555;
+    color: #ffffff;
 }
 
 .input-group input {
@@ -53,7 +54,7 @@
 }
 
 .button-imprimir {
-    background-color: #40B2A4; /* Color para el botón de imprimir */
+    background-color: #DD8329; /* Color para el botón de imprimir */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -63,5 +64,5 @@
 }
 
 .button-imprimir:hover {
-    background-color: #339C8A; /* Color más oscuro al pasar el mouse */
+    background-color: #bf7021; /* Color más oscuro al pasar el mouse */
 }

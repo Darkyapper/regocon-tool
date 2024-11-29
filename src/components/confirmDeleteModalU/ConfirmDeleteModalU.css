@@ -6,7 +6,7 @@
 
 .custom-mdls{
     font-family: 'Noto Sans', sans-serif;
-    color: #121212;
+    color: #ffffff;
 }
 
 .title-mdls{
@@ -14,12 +14,13 @@
     text-align: center;
 }
 
-.button-cs {
+.button-cs-mdld {
+    color:#121212;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-cs:hover {
+.button-cs-mdld:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Cambia el fondo al pasar el cursor */
     transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    color: #121212;
+    color: #ffffff;
 }

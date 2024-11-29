@@ -40,7 +40,7 @@ export default function QRCodeReaderVal() {
 
     return (
         <div className="qr-scanner-container">
-            <h2 className="text-lg mb-4">Escanear Código QR</h2>
+            <h2 className="text-lg mb-4 text-[#ffffff]">Escanear Código QR</h2>
             <QrScanner
                 className="qr-scanner-cs"
                 delay={300}
@@ -54,7 +54,7 @@ export default function QRCodeReaderVal() {
                 </div>
             )}
             {ticketInfo && (
-                <div className="mt-4 p-4 border rounded bg-green-100">
+                <div className="mt-4 p-4 border rounded bg-[#374151] text-white">
                     <h3 className="text-lg font-bold">Información del Boleto</h3>
                     <p><strong>Código:</strong> {ticketInfo.code}</p>
                     <p><strong>Nombre:</strong> {ticketInfo.ticket_name}</p>

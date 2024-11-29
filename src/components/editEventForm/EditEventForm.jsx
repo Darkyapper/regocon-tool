@@ -105,16 +105,16 @@ export default function EditEventForm() {
     };
 
     return (
-        <div className="register-user-form p-4 bg-white rounded-lg shadow-md">
+        <div className="register-user-form p-4 bg-[#1F2937] rounded-lg shadow-md">
             <div className="edit-div-cs flex flex-row items-center">
-                <button className="button-cs mx-1 px-3 py-2 rounded bg-orange-500 text-white hover:text-black" onClick={handleBackClick}>
+                <button className="button-cs mx-1 px-3 py-2 rounded bg-orange-500 text-white hover:text-white" onClick={handleBackClick}>
                     <IoArrowBackOutline />
                 </button>
-                <h2 className="text-lg">Editar Evento</h2>
+                <h2 className="text-lg text-white">Editar Evento</h2>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form className='bg-[#374151]' onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre del evento</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-white">Nombre del evento</label>
                     <input
                         type="text"
                         id="name"
@@ -126,7 +126,7 @@ export default function EditEventForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="event_date" className="block text-sm font-medium text-gray-700">Fecha del evento</label>
+                    <label htmlFor="event_date" className="block text-sm font-medium text-white">Fecha del evento</label>
                     <input
                         type="date"
                         id="event_date"
@@ -138,7 +138,7 @@ export default function EditEventForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="location" className="block text-sm font-medium text-gray-700">Ubicación</label>
+                    <label htmlFor="location" className="block text-sm font-medium text-white">Ubicación</label>
                     <input
                         type="text"
                         id="location"
@@ -150,7 +150,7 @@ export default function EditEventForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="description" className="block text-sm font-medium text-gray-700">Descripción corta del evento</label>
+                    <label htmlFor="description" className="block text-sm font-medium text-white">Descripción corta del evento</label>
                     <input
                         type="text"
                         id="description"
@@ -161,7 +161,7 @@ export default function EditEventForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="category_id" className="block text-sm font-medium text-gray-700">Tipo de Boleto para Acceder</label>
+                    <label htmlFor="category_id" className="block text-sm font-medium text-white">Tipo de Boleto para Acceder</label>
                     <select
                         id="category_id"
                         name="category_id"
@@ -178,7 +178,7 @@ export default function EditEventForm() {
                 </div>
                 <button
                     type="submit"
-                    className="sumbit-custom bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="sumbit-custom bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                 >
                     Guardar
                 </button>

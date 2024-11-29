@@ -37,11 +37,11 @@ export default function RegisterUserForm() {
         }
     };
     return (
-        <div className="register-user-form p-4 bg-white rounded-lg shadow-md">
-            <h2 className="custom-wawa text-lg mb-4">Registrar Nuevo Usuario</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="register-user-form p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="custom-wawa-uss text-lg mb-4">Registrar Nuevo Usuario</h2>
+            <form className="bg-[#374151]" onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">Nombre</label>
+                    <label htmlFor="first_name" className="block text-sm font-medium text-white">Nombre</label>
                     <input
                         type="text"
                         id="first_name"
@@ -53,7 +53,7 @@ export default function RegisterUserForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">Apellido</label>
+                    <label htmlFor="last_name" className="block text-sm font-medium text-white">Apellido</label>
                     <input
                         type="text"
                         id="last_name"
@@ -65,7 +65,7 @@ export default function RegisterUserForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-white">Correo Electrónico</label>
                     <input
                         type="email"
                         id="email"
@@ -77,7 +77,7 @@ export default function RegisterUserForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Número de Teléfono</label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white">Número de Teléfono</label>
                     <input
                         type="text"
                         id="phone"
@@ -89,7 +89,7 @@ export default function RegisterUserForm() {
                 </div>
                 <button
                     type="submit"
-                    className="sumbit-custom bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="sumbit-custom bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                 >
                     Registrar
                 </button>

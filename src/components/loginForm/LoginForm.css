@@ -10,8 +10,8 @@
 
 form {
     margin-top: 0;
-    background-color: #DDDDDD;
-    color: black;
+    background-color: #1F2937;
+    color: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0px 12px 26px 5px rgba(0, 0, 0, 0.25);
@@ -33,7 +33,7 @@ form .title-form {
 .just-it-a{
     text-align: center;
     margin-top: 2rem;
-    color: rgb(40, 40, 238);
+    color: #DD8329;
     text-decoration:underline;
 }
 
@@ -55,5 +55,10 @@ form .button-to-access{
     justify-content: center;
     display: flex;
     margin-top: 1rem;
+}
+
+/*ESTO CAMBIA EL COLOR DEL TEXTO DENTRO DEL INPUT*/
+.custom-form input {
+    color: black; /* Cambia el color del texto dentro del input a negro */
 }
 

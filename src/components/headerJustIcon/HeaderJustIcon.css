@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 .custom-header{
-    background-color: #EB6D1E;
+    background-color: #1F2937;
 }
 
 .custom-header .custom-logo{
     width: 8rem;
+    filter: invert();
 }

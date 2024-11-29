@@ -10,7 +10,7 @@
 .not-found {
     text-align: center;
     padding-top: 15rem;
-    background-color: #EB6D1E;
+    background-color: #1F2937;
     width: 100%;
     height: 100vh;
 }
@@ -30,7 +30,7 @@
 .go-home-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #40B2A4; /* Cambia según tu tema */
+    background-color: #DD8329; /* Cambia según tu tema */
     color: white;
     border: none;
     border-radius: 5px;
@@ -38,5 +38,5 @@
 }
 
 .go-home-button:hover {
-    background-color: #339C8A;
+    background-color: #bf7021;
 }

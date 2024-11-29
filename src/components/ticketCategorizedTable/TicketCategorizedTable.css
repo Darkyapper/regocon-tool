@@ -4,15 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-cs{
+.custom-cs-tcta{
     font-family: 'Noto Sans', sans-serif;
-    color: #121212;
+    color: #ffffff;
 }
 
-.title-uts{
+.title-uts-tcta{
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
-    color: #121212;
+    color: #ffffff;
 }
 
 .modal-overlay {
@@ -30,7 +30,7 @@
 
 .modal-content {
     font-family: 'Noto Sans', sans-serif;
-    background: white;
+    background: #1F2937;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -41,19 +41,23 @@
 
 }
 
-.close-button {
+.close-button-a {
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #DD8329;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.download-button {
+.close-button-a:hover {
+    background-color: #bf7021;
+}
+
+.download-button-a {
     margin-top: 10px;
-    background-color: #4CAF50; /* Green */
+    background-color: #2563EB; /* Green */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -61,6 +65,6 @@
     cursor: pointer;
 }
 
-.download-button:hover {
-    background-color: #45a049; /* Darker green */
+.download-button-a:hover {
+    background-color: #1D4ED8; /* Darker green */
 }

@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 .custom-navbar{
-    background-color: #EB6D1E;
+    background-color: #1F2937;
 }
 
 .custom-navbar .custom-logo{
     width: 8rem;
+    filter: invert();
 }
 
 .custom-navbar .custom-icons{

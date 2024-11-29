@@ -19,7 +19,7 @@ export default function RecommendedActions() {
     }
 
     return (
-        <div className="recommended-actions p-4 bg-white rounded-lg shadow-md">
+        <div className="recommended-actions p-4 rounded-lg">
             <h2 className="text-lg mb-4">Acciones Recomendadas</h2>
             <div className="grid grid-cols-2 gap-4">
                 <button onClick={() => selectActionClic('Crear boletos nuevos')} className="action-button">

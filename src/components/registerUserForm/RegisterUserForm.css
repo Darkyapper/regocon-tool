@@ -8,10 +8,11 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
-.register-user-form .custom-wawa {
+.register-user-form .custom-wawa-uss {
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .sumbit-custom{

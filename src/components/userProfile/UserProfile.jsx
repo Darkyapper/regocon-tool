@@ -28,12 +28,12 @@ export default function UserProfile() {
     };
 
     return (
-        <div className='custom-xuxu'>
+        <div className='custom-xuxu text-white'>
             {error && <p className="text-red-500">{error}</p>} {/* Mostrar error si hay */}
             {user ? (
                 <div className='profile-container'>
                     <h2 className="title text-2xl font-bold">Perfil de Administrador</h2>
-                    <div className="profile-info mt-4 flex items-center">
+                    <div className="bg-[#1F2937] profile-info mt-4 flex items-center">
                         <img src={user.picture || 'default-avatar.png'} alt="Foto de perfil" className="rounded-full w-32 h-32 mr-4" />
                         <div className="user-details">
                             <p className='consejo'>Tu usuario lo puedes editar desde la página principal de RegCon™</p>

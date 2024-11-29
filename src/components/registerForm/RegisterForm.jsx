@@ -165,19 +165,19 @@ export default function RegisterForm() {
     };
 
     return (
-        <div className="register-r-form p-4 bg-white rounded-lg shadow-md">
+        <div className="register-r-form p-4 bg-[#1F2937] rounded-lg shadow-md">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="custom-wawa">Pre Registro a Evento</h2>
+                <h2 className="custom-wawa-rfc">Pre Registro a Evento</h2>
                 <button
-                    className="bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                     onClick={handleAddUser}
                 >
                     Registrar Usuario Nuevo
                 </button>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form className="bg-[#374151]" onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="user_id" className="block text-sm font-medium text-gray-700">Usuario</label>
+                    <label htmlFor="user_id" className="block text-sm font-medium text-[#ffffff]">Usuario</label>
                     <select
                         id="user_id"
                         name="user_id"
@@ -193,7 +193,7 @@ export default function RegisterForm() {
                     </select>
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="event_id" className="block text-sm font-medium text-gray-700">Evento</label>
+                    <label htmlFor="event_id" className="block text-sm font-medium text-[#ffffff]">Evento</label>
                     <select
                         id="event_id"
                         name="event_id"
@@ -209,7 +209,7 @@ export default function RegisterForm() {
                     </select>
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="ticket_code" className="block text-sm font-medium text-gray-700">Código del Boleto</label>
+                    <label htmlFor="ticket_code" className="block text-sm font-medium text-[#ffffff]">Código del Boleto</label>
                     <input
                         type="text"
                         id="ticket_code"
@@ -222,7 +222,7 @@ export default function RegisterForm() {
                     <button 
                         type="button" 
                         onClick={() => setQrModalVisible(true)} // Cambiado a qrModalVisible
-                        className='bg-yellow-400 py-1 px-2 mt-1 rounded font-medium hover:bg-yellow-600'
+                        className='bg-[#2563EB] py-1 px-2 mt-1 rounded font-medium hover:bg-[#1D4ED8] text-white'
                     >
                         Escanear por QR
                     </button>
@@ -230,7 +230,7 @@ export default function RegisterForm() {
                 {error && <p className="text-red-500">{error}</p>}
                 <button
                     type="submit"
-                    className="submit-custom bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="submit-custom bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                 >
                     Registrar Asistencia
                 </button>

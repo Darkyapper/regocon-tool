@@ -4,19 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-cs{
+.custom-cs-utaa{
     font-family: 'Noto Sans', sans-serif;
     color: #121212;
 }
 
-.tablas{
+.tablas-utaa{
     font-family: 'Noto Sans', sans-serif;
     font-size: 0.8rem;
-    color: #121212;
+    color: #ffffff;
 }
 
-.title-uts{
+.title-uts-utaa{
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
-    color: #121212;
+    color: #ffffff;
 }

@@ -17,25 +17,26 @@
     z-index: 1000; /* Asegúrate de que esté en la parte superior */
 }
 
-.modal-content {
-    background: white;
+.modal-content-qr {
+    background: #1F2937;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    width: 90%; /* Ajusta el ancho según tus necesidades */
+    width: 30%; /* Ajusta el ancho según tus necesidades */
+    color : #ffffff;
     max-width: 500px; /* Establece un ancho máximo */
 }
 
-.close-button {
+.close-button-qr {
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #4CAF50; /* Color de fondo del botón */
+    background-color: #DD8329; /* Color de fondo del botón */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.close-button:hover {
-    background-color: #45a049; /* Color de fondo al pasar el ratón */
+.close-button-qr:hover {
+    background-color: #bf7021; /* Color de fondo al pasar el ratón */
 }

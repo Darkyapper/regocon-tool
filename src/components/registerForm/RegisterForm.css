@@ -8,6 +8,12 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+.custom-wawa-rfc{
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 .register-r-form .custom-wawa {
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
@@ -36,20 +42,7 @@
     border-radius: 5px;
     text-align: center;
     width: 300px;
-}
-
-.close-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    background-color: #45a049;
+    color: #ffffff;
 }
 
 .modal-overlay {
@@ -69,19 +62,7 @@
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    color: #ffffff;
     width: 300px;
 }
 
-.close-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    background-color: #45a049;
-}

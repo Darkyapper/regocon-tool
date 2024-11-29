@@ -4,13 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-cs{
+.custom-cs-tf{
     font-family: 'Noto Sans', sans-serif;
-    color: #121212;
+    color: #ffffff;
 }
 
-.title-uts{
+.title-uts-tf{
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
-    color: #121212;
+    color: #ffffff;
 }

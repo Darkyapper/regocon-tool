@@ -6,15 +6,16 @@
 
 .register-event-form {
     font-family: 'Noto Sans', sans-serif;
+    color: white;
 }
 
-.register-event-form .custom-wawa {
+.register-event-form .custom-wawa-evt {
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.sumbit-custom{
+.sumbit-custom-evt{
     font-weight: 500;
 }
 

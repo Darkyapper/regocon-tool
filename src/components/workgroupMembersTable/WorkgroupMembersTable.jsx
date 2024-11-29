@@ -82,9 +82,9 @@ export default function WorkgroupMembersTable() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md">
-            <h2 className="title-uts">Miembros del Grupo de Trabajo</h2>
-            <table className="tablas-cs min-w-full border-collapse">
+        <div className="p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="title-uts text-white">Miembros del Grupo de Trabajo</h2>
+            <table className="text-white tablas-cs min-w-full border-collapse">
                 <thead>
                     <tr>
                         <th className="border px-4 py-2">Nombre</th>
@@ -105,13 +105,13 @@ export default function WorkgroupMembersTable() {
                             <td className="border px-4 py-2">{member.admin_email}</td>
                             <td className="border px-4 py-2">
                                 <button
-                                    className="button-cs mx-1 px-4 py-2 rounded bg-teal-400 text-white hover:text-black"
+                                    className="button-cs mx-1 px-4 py-2 rounded bg-[#DD8329] text-white hover:text-white"
                                     onClick={() => handleViewClick(member.admin_id)} // Cambiar a la función de ver perfil
                                 >
                                     <FaEye />
                                 </button>
                                 <button
-                                    className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-black"
+                                    className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-white"
                                     onClick={() => handleDeleteClick(member.admin_id)}
                                 >
                                     <FaRegTrashAlt />
@@ -127,7 +127,7 @@ export default function WorkgroupMembersTable() {
                     <button
                         key={index}
                         onClick={() => paginate(index + 1)}
-                        className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}
+                        className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-gray-200'}`}
                     >
                         {index + 1}
                     </button>

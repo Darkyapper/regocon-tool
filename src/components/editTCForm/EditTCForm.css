@@ -4,13 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.register-user-form {
+.register-user-form-tcf {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.register-user-form .custom-wawa {
+.register-user-form-tcf .custom-wawa {
     font-family: 'Tilt Neon', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -18,13 +18,13 @@
     font-weight: 500;
 }
 
-.custom-cs{
+.custom-cs-tcfe{
     font-family: 'Noto Sans', sans-serif;
-    color: #121212;
+    color: #ffffff;
 }
 
-.title-uts{
+.title-uts-tcfe{
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
-    color: #121212;
+    color: #ffffff;
 }

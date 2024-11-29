@@ -41,7 +41,7 @@ export default function ConfigDash() {
     }
 
     return (
-        <div className="recommended-actions p-4 bg-white rounded-lg shadow-md">
+        <div className="recommended-actions p-4 bg-[#1F2937] rounded-lg shadow-md">
             <h1 className="text-lg mb-4">Configuraciones</h1>
             <div className="flex flex-col gap-4">
                 <button onClick={handleSettings} className="action-button flex items-center">

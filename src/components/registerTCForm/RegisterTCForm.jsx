@@ -59,16 +59,16 @@ export default function RegisterTCForm() {
     };
 
     return (
-        <div className="register-user-form p-4 bg-white rounded-lg shadow-md">
+        <div className="register-user-form-we p-4 bg-[#1F2937] rounded-lg shadow-md">
             <div className="edit-div-cs flex flex-row items-center">
                 <button className="button-cs mx-1 px-3 py-2 rounded bg-orange-500 text-white hover:text-black" onClick={handleBackClick}>
                     <IoArrowBackOutline />
                 </button>
-                <h2 className="title-uts text-lg">Crear Categoría de Boletos</h2>
+                <h2 className="title-uts-tctwew">Crear Categoría de Boletos</h2>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form className="bg-[#374151]" onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre de la categoría</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-white">Nombre de la categoría</label>
                     <input
                         type="text"
                         id="name"
@@ -80,7 +80,7 @@ export default function RegisterTCForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="price" className="block text-sm font-medium text-gray-700">Costo</label>
+                    <label htmlFor="price" className="block text-sm font-medium text-white">Costo</label>
                     <input
                         type="number" // Cambiado a type="number"
                         id="price"
@@ -92,7 +92,7 @@ export default function RegisterTCForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="description" className="block text-sm font-medium text-gray-700">Descripción breve de la categoría</label>
+                    <label htmlFor="description" className="block text-sm font-medium text-white">Descripción breve de la categoría</label>
                     <input
                         type="text" // Cambiado a type="text"
                         id="description"
@@ -105,7 +105,7 @@ export default function RegisterTCForm() {
                 </div>
                 <button
                     type="submit"
-                    className="submit-custom bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="submit-custom bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                 >
                     Crear Categoría
                 </button>

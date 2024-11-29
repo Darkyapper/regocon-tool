@@ -68,9 +68,9 @@ export default function EventsTable() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md">
-            <h2 className="title-uts">Administrar Eventos</h2>
-            <table className="min-w-full border-collapse">
+        <div className="p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="title-uts text-white">Administrar Eventos</h2>
+            <table className="min-w-full text-white border-collapse">
                 <thead>
                     <tr>
                         <th className="border px-4 py-2">Evento</th>
@@ -88,10 +88,10 @@ export default function EventsTable() {
                             <td className="border px-4 py-2">{event.location}</td>
                             <td className="border px-4 py-2">{event.description}</td>
                             <td className="border px-4 py-2">
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-teal-400 text-white hover:text-black" onClick={() => navigate(`/events/edit/${event.id}`)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-[#DD8329] text-white hover:text-white" onClick={() => navigate(`/events/edit/${event.id}`)}>
                                     <FaEdit />
                                 </button>
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-black" onClick={() => handleDeleteClick(event.id)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-white" onClick={() => handleDeleteClick(event.id)}>
                                     <FaRegTrashAlt />
                                 </button>
                             </td>
@@ -102,7 +102,7 @@ export default function EventsTable() {
             {/* Paginación */}
             <div className="flex justify-center mt-4">
                 {[...Array(Math.ceil(events.length / eventsPerPage))].map((_, index) => (
-                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}>
+                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-gray-200'}`}>
                         {index + 1}
                     </button>
                 ))}

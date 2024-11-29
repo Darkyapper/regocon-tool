@@ -4,7 +4,7 @@ import image from '../../assets/regcon-src.png';
 
 export default function DownloadApp() {
     return (
-        <div className="custom-content-ess">
+        <div className="text-white custom-content-ess">
             <h1>Esta función aún no está disponible en la versión web.</h1>
             <p>Descarga la aplicación para acceder a funciones off-line, bases de datos local, conexión a validadores e imporesoras, ¡Y mucho más!</p>
             <img src={image} alt="Download App" />

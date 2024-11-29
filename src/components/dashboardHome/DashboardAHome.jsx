@@ -39,7 +39,7 @@ export default function DashboardAHome() {
             <h2 className="text-lg mb-4">Acciones Rápidas</h2>
             <div className="grid grid-cols-3 gap-4">
                 <div
-                    className="button-custom bg-teal-400 p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
                     onClick={() => handleActionClick('Registrar Asistencia')}
                 >
                     <h3 className="button-t-c">Pre Registro</h3>
@@ -49,7 +49,7 @@ export default function DashboardAHome() {
                 </div>
 
                 <div
-                    className="button-custom bg-teal-400 p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
                     onClick={() => handleActionClick('Validar Asistencia')}
                 >
                     <h3 className="button-t-c">Validar Asistencia</h3>
@@ -58,7 +58,7 @@ export default function DashboardAHome() {
                     </div>
                 </div>
                 <div
-                    className="button-custom bg-teal-400 p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
                     onClick={() => handleActionClick('Crear Evento')}
                 >
                     <h3 className="button-t-c">Crear Evento</h3>

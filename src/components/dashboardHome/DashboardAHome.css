@@ -12,14 +12,14 @@
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
 }
 
 .custom-content .title-c{
     font-family: 'Tilt Neon', sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
 }
 
 .icon-custom {
@@ -34,11 +34,11 @@
     font-family: 'Noto Sans', sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    color: #000000;
+    color: #ffffff;
     transition: background-color 0.3s ease;
 }
 
 .button-custom:hover {
-    background-color: #38b2ac;
+    background-color: #bf7021;
     transform: scale(1.05);
 }

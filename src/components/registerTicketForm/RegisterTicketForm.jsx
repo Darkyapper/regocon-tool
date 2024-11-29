@@ -104,11 +104,11 @@ export default function RegisterTicketForm() {
     };
 
     return (
-        <div className="register-ticket-form p-4 bg-white rounded-lg shadow-md">
-            <h2 className="custom-wawa text-lg mb-4">Crear Boletos</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="register-ticket-form p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="custom-wawa-vv text-white text-lg mb-4">Crear Boletos</h2>
+            <form className='bg-[#374151]' onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre del Boleto</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-white">Nombre del Boleto</label>
                     <input
                         type="text"
                         id="name"
@@ -120,7 +120,7 @@ export default function RegisterTicketForm() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="category_id" className="block text-sm font-medium text-gray-700">Tipo de Boleto</label>
+                    <label htmlFor="category_id" className="block text-sm font-medium text-white">Tipo de Boleto</label>
                     <select
                         id="category_id"
                         name="category_id"
@@ -139,13 +139,13 @@ export default function RegisterTicketForm() {
                     <button
                         type="button" // Asegúrate de que sea un botón de tipo "button"
                         onClick={goToAdeministrarCategorias}
-                        className='bg-yellow-400 py-1 px-2 mt-1 rounded font-medium hover:bg-yellow-600'
+                        className='bg-[#2563EB] py-1 px-2 mt-1 rounded text-white font-medium hover:bg-[#1D4ED8]'
                     >
                         Administrar Categorías
                     </button>
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="quantity" className="block text-sm font-medium text-gray-700">Cantidad</label>
+                    <label htmlFor="quantity" className="block text-sm font-medium text-white">Cantidad</label>
                     <input
                         type="number"
                         id="quantity"
@@ -159,7 +159,7 @@ export default function RegisterTicketForm() {
                 </div>
                 <button
                     type="submit"
-                    className="submit-custom bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="submit-custom bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                 >
                     Crear Boletos
                 </button>

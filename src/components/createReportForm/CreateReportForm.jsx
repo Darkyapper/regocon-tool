@@ -105,13 +105,13 @@ export default function CreateReportForm() {
                     </div>
                     <div className="input-group">
                         <label>Logo</label>
-                        <small>Se recomienda formato PNG y relación de aspecto 1:1</small>
-                        <input type="file" onChange={handleLogoChange} required />
+                        <small className='text-[#E4E4E4]'>Se recomienda formato PNG y relación de aspecto 1:1</small>
+                        <input className='bg-white' type="file" onChange={handleLogoChange} required />
                     </div>
                     <div className="input-group">
                         <label>Fecha de Creación</label>
                         <input type="date" value={printDate} onChange={(e) => setPrintDate(e.target.value)} required />
-                        <small className='text-orange-600'>*No es necesario que se llenen todos los campos para generar el informe</small>
+                        <small className='text-white'>*No es necesario que se llenen todos los campos para generar el informe</small>
                     </div>
                     <button type="button" className="button-imprimir" onClick={handleSaveAsPDF}>Guardar PDF</button>
                 </form>

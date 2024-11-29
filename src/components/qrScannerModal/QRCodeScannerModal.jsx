@@ -16,7 +16,7 @@ const QRCodeScannerModal = ({ onClose, onCodeDetected }) => {
 
     return (
         <div className="modal-overlay">
-            <div className="modal-content">
+            <div className="modal-content-qr">
                 <h2 className="text-lg mb-4">Escanear Código QR</h2>
                 <QrScanner
                     delay={300}
@@ -24,7 +24,7 @@ const QRCodeScannerModal = ({ onClose, onCodeDetected }) => {
                     onScan={handleScan}
                     style={{ width: '100%', height: 'auto' }} // Asegúrate de que se ajuste al modal
                 />
-                <button onClick={onClose} className="close-button">Cerrar</button>
+                <button onClick={onClose} className="close-button-qr">Cerrar</button>
             </div>
         </div>
     );

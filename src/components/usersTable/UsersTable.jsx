@@ -67,9 +67,9 @@ export default function UsersTable() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md">
-            <h2 className="title-uts">Administrar Usuarios Registrados en Eventos</h2>
-            <table className="tablas min-w-full border-collapse">
+        <div className="p-4 bg-[#1F2937] rounded-lg shadow-md">
+            <h2 className="title-uts-utaa">Administrar Usuarios Registrados en Eventos</h2>
+            <table className="tablas-utaa min-w-full border-collapse">
                 <thead>
                     <tr>
                         <th className="border px-4 py-2">Nombre</th>
@@ -110,7 +110,7 @@ export default function UsersTable() {
                     <button 
                         key={index} 
                         onClick={() => paginate(index + 1)} 
-                        className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}
+                        className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-gray-200'}`}
                     >
                         {index + 1}
                     </button>

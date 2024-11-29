@@ -56,7 +56,7 @@ const EventStatistics = () => {
     };
 
     return (
-        <div className="custom-estats p-4 bg-white rounded-lg shadow-md">
+        <div className="text-white custom-estats p-4 bg-[#1F2937] rounded-lg shadow-md">
             <h2 className="title-uts text-2xl font-bold mb-4">Estadísticas de Eventos</h2>
             {error && <p className="text-red-500">{error}</p>}
             {eventData.length > 0 ? (

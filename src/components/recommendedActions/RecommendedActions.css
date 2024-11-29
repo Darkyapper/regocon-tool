@@ -7,10 +7,11 @@
 .recommended-actions{
     font-family: 'Not Sans', sans-serif;
     font-size: 1.5rem;
+    color: #ffffff;
 }
 
-.action-button {
-    background-color: #40B2A4;
+.recommended-actions .action-button {
+    background-color: #DD8329;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -21,6 +22,6 @@
     text-align: center;
 }
 
-.action-button:hover {
-    background-color: #339C8A;
+.recommended-actions .action-button:hover {
+    background-color: #bf7021;
 }

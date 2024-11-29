@@ -17,7 +17,7 @@ const QrCodeGenerator = ({ code }) => {
     return (
         <div>
             <img src={qrCodeUrl} alt={`Ha ocurrido un error, intetelo de nuevo`} />
-            <button className="download-button" onClick={handleDownload}>
+            <button className="download-button-a" onClick={handleDownload}>
             <FaFileDownload />
             </button>
         </div>

@@ -73,11 +73,11 @@ export default function TicketsTable() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        <div className="custom-cs-tf p-4 bg-[#1F2937] rounded-lg shadow-md">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="title-uts">Administrar Boletos</h2>
+                <h2 className="title-uts-tf">Administrar Boletos</h2>
                 <button
-                    className="bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                    className="bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
                     onClick={handleValidate}
                 >
                     Validar Boleto
@@ -99,13 +99,13 @@ export default function TicketsTable() {
                             <td className="border px-4 py-2">{tc.ticket_count}</td>
                             <td className="border px-4 py-2">{tc.description}</td>
                             <td className="border px-4 py-2">
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-teal-400 text-white hover:text-black" onClick={() => navigate(`/tickets/categories/${tc.id}`)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-[#DD8329] text-white hover:text-white" onClick={() => navigate(`/tickets/categories/${tc.id}`)}>
                                     <FaEye />
                                 </button>
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-teal-400 text-white hover:text-black" onClick={() => navigate(`/ticket-categories/edit/${tc.id}`)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-[#DD8329] text-white hover:text-white" onClick={() => navigate(`/ticket-categories/edit/${tc.id}`)}>
                                     <FaEdit />
                                 </button>
-                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-black" onClick={() => handleDeleteClick(tc.id)}>
+                                <button className="button-cs mx-1 px-4 py-2 rounded bg-red-600 text-white hover:text-white" onClick={() => handleDeleteClick(tc.id)}>
                                     <FaRegTrashAlt />
                                 </button>
                             </td>
@@ -116,7 +116,7 @@ export default function TicketsTable() {
             {/* Paginación */}
             <div className="flex justify-center mt-4">
                 {[...Array(Math.ceil(ticketCategories.length / ticketCategoriesPerPage))].map((_, index) => (
-                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-teal-400 text-white' : 'bg-gray-200'}`}>
+                    <button key={index} onClick={() => paginate(index + 1)} className={`button-cs mx-1 px-4 py-2 rounded ${currentPage === index + 1 ? 'bg-[#DD8329] text-white' : 'bg-gray-200'}`}>
                         {index + 1}
                     </button>
                 ))}

@@ -93,35 +93,35 @@ export default function ValidateAttendanceForm() {
     };
     
     return (
-        <div className="custom-cs-ab validate-attendance-form p-4 bg-white rounded-lg shadow-md">
+        <div className="custom-cs-ab validate-attendance-form p-4 bg-[#1F2937] rounded-lg shadow-md">
             <h2 className="title-uts-avs">Registrar Asistencia</h2>
             <div className="mb-4">
-                <label htmlFor="ticketCode" className="block text-sm font-medium text-gray-700">Código del Boleto</label>
+                <label htmlFor="ticketCode" className="block text-sm font-medium text-white">Código del Boleto</label>
                 <input
                     type="text"
                     id="ticketCode"
                     value={ticketCode}
                     onChange={handleInputChange}
-                    className="mt-1 block w-full border rounded-md p-2"
+                    className="mt-1 block w-full border border-[#4B5563] rounded-md p-2 bg-[#374151] text-white focus:outline-none focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]"
                 />
                 <button 
                     type="button" 
                     onClick={() => setQrModalVisible(true)} 
-                    className='bg-yellow-400 py-1 px-2 mt-1 rounded font-medium hover:bg-yellow-600'
+                    className='bg-[#2563EB] py-1 px-2 mt-2 rounded font-medium hover:bg-[#1D4ED8]'
                 >
                     Escanear por QR
                 </button>
             </div>
             <button
                 onClick={handleValidate}
-                className="bg-teal-400 text-white py-2 px-4 rounded hover:bg-teal-500"
+                className="bg-[#DD8329] text-white py-2 px-4 rounded hover:bg-[#bf7021]"
             >
                 Validar Boleto
             </button>
 
             {/* Información del ticket */}
             {ticketInfo && (
-                <div className="mt-4 p-4 border rounded bg-green-100">
+                <div className="mt-4 p-4 border rounded bg-[#374151]">
                     <h3 className="text-lg font-bold">Información del Boleto</h3>
                     <p><strong>Código:</strong> {ticketInfo.code}</p>
                     <p><strong>Nombre:</strong> {ticketInfo.ticket_name}</p>
