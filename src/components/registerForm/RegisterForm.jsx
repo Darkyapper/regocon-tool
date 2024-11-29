@@ -184,7 +184,7 @@ export default function RegisterForm() {
                         value={formData.user_id}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full border rounded-md p-2"
+                        className="mt-1 block w-full border text-black rounded-md p-2"
                     >
                         <option value="">Seleccione un usuario</option>
                         {users.map(user => (
@@ -200,7 +200,7 @@ export default function RegisterForm() {
                         value={formData.event_id}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full border rounded-md p-2"
+                        className="mt-1 block w-full border text-black rounded-md p-2"
                     >
                         <option value="">Seleccione un evento</option>
                         {events.map(event => (

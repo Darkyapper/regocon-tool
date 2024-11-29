@@ -127,7 +127,7 @@ export default function RegisterTicketForm() {
                         value={formData.category_id}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full border rounded-md p-2"
+                        className="mt-1 block text-black w-full border rounded-md p-2"
                     >
                         <option value="" disabled>Selecciona una categoría</option>
                         {categories.map(category => (

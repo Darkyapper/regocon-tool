@@ -58,7 +58,7 @@ form .button-to-access{
 }
 
 /*ESTO CAMBIA EL COLOR DEL TEXTO DENTRO DEL INPUT*/
-.custom-form input {
+form input {
     color: black; /* Cambia el color del texto dentro del input a negro */
 }
 

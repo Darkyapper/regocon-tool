@@ -168,7 +168,7 @@ export default function EditEventForm() {
                         value={formData.category_id}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full border rounded-md p-2"
+                        className="mt-1 block w-full border text-black rounded-md p-2"
                     >
                         <option value="">Seleccione una categoría</option>
                         {categories.map(category => (
