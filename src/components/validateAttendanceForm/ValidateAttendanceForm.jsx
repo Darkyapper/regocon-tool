@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import QRCodeScannerModal from '../qrScannerModal/QRCodeScannerModal';
 import ErrorModal from '../errorModal/ErrorModal';
 import './ValidateAttendanceForm.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function ValidateAttendanceForm() {
     const [ticketCode, setTicketCode] = useState('');
@@ -23,7 +24,7 @@ export default function ValidateAttendanceForm() {
 
         try {
             const workgroupId = localStorage.getItem('workgroup_id'); // Obtener el workgroup_id de la sesión
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-view-code/${ticketCode}?workgroup_id=${workgroupId}`);
+            const response = await fetch(`${apiUrl}/ticket-view-code/${ticketCode}?workgroup_id=${workgroupId}`);
             const data = await response.json();
 
             if (response.ok) {
@@ -44,7 +45,7 @@ export default function ValidateAttendanceForm() {
 
     const validateAttendance = async (ticketData) => {
         try {
-            const attendanceResponse = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance?ticket_code=${ticketData.code}&workgroup_id=${ticketData.workgroup_id}`);
+            const attendanceResponse = await fetch(`${apiUrl}/attendance?ticket_code=${ticketData.code}&workgroup_id=${ticketData.workgroup_id}`);
             const attendanceData = await attendanceResponse.json();
 
             if (attendanceResponse.ok && attendanceData.data.length > 0) {
@@ -70,7 +71,7 @@ export default function ValidateAttendanceForm() {
 
     const updateAttendance = async (attendanceId) => {
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance-status/${attendanceId}`, {
+            const response = await fetch(`${apiUrl}/attendance-status/${attendanceId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

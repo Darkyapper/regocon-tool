@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './RegisterTicketForm.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function RegisterTicketForm() {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function RegisterTicketForm() {
 
             try {
                 // Modificar la URL para incluir el workgroup_id
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories?workgroup_id=${workgroupId}`);
+                const response = await fetch(`${apiUrl}/ticket-categories?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setCategories(data.data); // Cargar categorías de boletos
@@ -77,7 +78,7 @@ export default function RegisterTicketForm() {
                 workgroup_id: workgroup_id // Incluir workgroup_id
             };
             ticketPromises.push(
-                fetch('https://recgonback-8awa0rdv.b4a.run/tickets', {
+                fetch('${apiUrl}/tickets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QrScanner from 'react-qr-scanner';
 import './QrScannerVal.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function QRCodeReaderVal() {
     const [result, setResult] = useState('');
@@ -16,7 +17,7 @@ export default function QRCodeReaderVal() {
             const workgroupId = localStorage.getItem('workgroup_id'); // Obtener el workgroup_id de la sesión
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-view/${code.trim()}?workgroup_id=${workgroupId}`); // URL para validar el boleto
+                const response = await fetch(`${apiUrl}/ticket-view/${code.trim()}?workgroup_id=${workgroupId}`); // URL para validar el boleto
                 const info = await response.json();
                 if (response.ok) {
                     setTicketInfo(info.data); // Almacena la información del boleto

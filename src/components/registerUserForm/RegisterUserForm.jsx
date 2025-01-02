@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './RegisterUserForm.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function RegisterUserForm() {
     const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function RegisterUserForm() {
         e.preventDefault();
         
         try {
-            const response = await fetch('https://recgonback-8awa0rdv.b4a.run/users', {
+            const response = await fetch(`${apiUrl}/users`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

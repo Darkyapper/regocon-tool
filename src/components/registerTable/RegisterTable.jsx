@@ -3,6 +3,7 @@ import './RegisterTable.css';
 import { FaRegTrashAlt } from "react-icons/fa";
 import ConfirmDeleteModalU from '../confirmDeleteModalU/ConfirmDeleteModalU';
 import { useNavigate } from 'react-router-dom';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function RegisterTable() {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function RegisterTable() {
             }
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado
+                const response = await fetch(`${apiUrl}/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado
                 const data = await response.json();
                 if (response.ok) {
                     setAttendances(data.data); // Suponiendo que 'data' contiene la lista de registros
@@ -43,7 +44,7 @@ export default function RegisterTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance/${attendanceToDelete}`, {
+            const response = await fetch(`${apiUrl}/attendance/${attendanceToDelete}`, {
                 method: 'DELETE',
             });
 

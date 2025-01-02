@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './UserProfile.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function UserProfile() {
     const { id } = useParams(); // Obtener el ID del usuario desde la ruta
@@ -14,7 +15,7 @@ export default function UserProfile() {
     const fetchUserProfile = async () => {
         const workgroupId = localStorage.getItem('workgroup_id'); // Obtener el workgroup_id de la sesión
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/admin/${id}?workgroup_id=${workgroupId}`); // Modificar endpoint para incluir workgroup_id
+            const response = await fetch(`${apiUrl}/admin/${id}?workgroup_id=${workgroupId}`); // Modificar endpoint para incluir workgroup_id
             const data = await response.json();
             if (response.ok) {
                 setUser(data.data); // Almacenar la información del usuario

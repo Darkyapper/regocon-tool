@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaBell, FaUser, FaCheck  } from 'react-icons/fa';
 import { IoGrid } from "react-icons/io5";
 import './Navbar.css';
-import logo from '../../assets/regcon-logo.png'
+import logo from '../../assets/regcon-tool-logo-white.png'
 
 export default function Navbar() {
     // Obtener la información del administrador actual desde localStorage

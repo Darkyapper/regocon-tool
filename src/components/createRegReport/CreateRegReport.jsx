@@ -4,6 +4,7 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import './CreateRegReport.css';
 import image from '../../assets/document.png';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function CreateRegReport() {
     const [author, setAuthor] = useState('');
@@ -26,7 +27,7 @@ export default function CreateRegReport() {
             }
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado para obtener detalles de asistencia
+                const response = await fetch(`${apiUrl}/attendance-info?workgroup_id=${workgroupId}`); // Endpoint actualizado para obtener detalles de asistencia
                 const data = await response.json();
                 if (response.ok) {
                     setAttendances(data.data); // Asumiendo que 'data' contiene la lista de asistencias

@@ -4,6 +4,7 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import './CreateTicketsReport.css';
 import image from '../../assets/document.png';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function CreateTicketsReport() {
     const [author, setAuthor] = useState('');
@@ -27,7 +28,7 @@ export default function CreateTicketsReport() {
 
             try {
                 // Modificar la URL para incluir el workgroup_id
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-view?workgroup_id=${workgroupId}`); 
+                const response = await fetch(`${apiUrl}/ticket-view?workgroup_id=${workgroupId}`); 
                 const data = await response.json();
                 if (response.ok) {
                     setTickets(data.data); // Actualizar para obtener la información de los boletos

@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeaderJustIcon.css'
-import logo from '../../assets/regcon-logo.png'
+import logo from '../../assets/regcon-tool-logo-white.png'
 
 export default function HeaderJustIcon() {
     return (

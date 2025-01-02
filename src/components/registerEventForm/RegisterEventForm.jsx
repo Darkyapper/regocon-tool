@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './RegisterEventForm.css';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function RegisterEventForm() {
     const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ export default function RegisterEventForm() {
             }
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories?workgroup_id=${workgroupId}`);
+                const response = await fetch(`${apiUrl}/ticket-categories?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setCategories(data.data);
@@ -53,7 +54,7 @@ export default function RegisterEventForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://recgonback-8awa0rdv.b4a.run/events', {
+            const response = await fetch(`${apiUrl}/events`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

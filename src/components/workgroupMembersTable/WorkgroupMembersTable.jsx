@@ -3,6 +3,7 @@ import './WorkgroupMembersTable.css';
 import { FaRegTrashAlt, FaEye } from "react-icons/fa";
 import ConfirmDeleteModalU from '../confirmDeleteModalU/ConfirmDeleteModalU';
 import { useNavigate } from 'react-router-dom';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function WorkgroupMembersTable() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function WorkgroupMembersTable() {
             }
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/workgroupdetails/${workgroupId}`); // Cambiar endpoint
+                const response = await fetch(`${apiUrl}/workgroupdetails/${workgroupId}`); // Cambiar endpoint
                 const data = await response.json();
                 if (response.ok) {
                     setMembers(data.data); // Asegúrate de que 'data' contenga la lista de miembros
@@ -53,7 +54,7 @@ export default function WorkgroupMembersTable() {
         const workgroupId = localStorage.getItem('workgroup_id'); // Obtén el workgroup_id
 
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/membership/${workgroupId}/${memberToDelete}`, {
+            const response = await fetch(`${apiUrl}/membership/${workgroupId}/${memberToDelete}`, {
                 method: 'DELETE',
             });
 

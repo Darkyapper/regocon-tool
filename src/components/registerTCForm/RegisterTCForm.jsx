@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Asegúrate de importar useNavigate
 import './RegisterTCForm.css';
 import { IoArrowBackOutline } from "react-icons/io5"; // Asegúrate de importar el icono
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function RegisterTCForm() {
     const navigate = useNavigate(); // Inicializa el hook de navegación
@@ -34,7 +35,7 @@ export default function RegisterTCForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://recgonback-8awa0rdv.b4a.run/ticket-categories', {
+            const response = await fetch(`${apiUrl}/ticket-categories`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

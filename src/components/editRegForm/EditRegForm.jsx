@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import QRCodeScannerModal from '../qrScannerModal/QRCodeScannerModal';
 import ErrorModal from '../errorModal/ErrorModal';
 import { IoArrowBackOutline } from "react-icons/io5"; // Importa el icono para el botón de volver
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function EditRegForm() {
     const { id } = useParams(); // Obtiene el ID del registro
@@ -23,7 +24,7 @@ export default function EditRegForm() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance/${id}`); // Cambiado al nuevo endpoint
+                const response = await fetch(`${apiUrl}/attendance/${id}`); // Cambiado al nuevo endpoint
                 const data = await response.json();
                 if (response.ok) {
                     setFormData(data.data);
@@ -37,7 +38,7 @@ export default function EditRegForm() {
 
         const fetchUsers = async () => {
             try {
-                const response = await fetch('https://recgonback-8awa0rdv.b4a.run/users');
+                const response = await fetch(`${apiUrl}/users`);
                 const data = await response.json();
                 if (response.ok) {
                     setUsers(data.data);
@@ -58,7 +59,7 @@ export default function EditRegForm() {
             }
 
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/events?workgroup_id=${workgroupId}`);
+                const response = await fetch(`${apiUrl}/events?workgroup_id=${workgroupId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setEvents(data.data);
@@ -84,7 +85,7 @@ export default function EditRegForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/attendance/${id}`, { // Cambiado al nuevo endpoint
+            const response = await fetch(`${apiUrl}/attendance/${id}`, { // Cambiado al nuevo endpoint
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

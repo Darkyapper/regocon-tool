@@ -5,6 +5,7 @@ import { IoArrowBackOutline, IoCloseOutline } from "react-icons/io5";
 import ConfirmDeleteModalU from '../confirmDeleteModalU/ConfirmDeleteModalU';
 import { useNavigate, useParams } from 'react-router-dom';
 import QrCodeGenerator from '../qrCodeGenerato/QrCodeGenerato';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function TicketCategorizedTable() {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function TicketCategorizedTable() {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/tickets/category/${category_id}`);
+                const response = await fetch(`${apiUrl}/tickets/category/${category_id}`);
                 const data = await response.json();
                 if (response.ok) {
                     setTickets(data.data);
@@ -40,7 +41,7 @@ export default function TicketCategorizedTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/tickets/${ticketToDelete}`, {
+            const response = await fetch(`${apiUrl}/tickets/${ticketToDelete}`, {
                 method: 'DELETE',
             });
 

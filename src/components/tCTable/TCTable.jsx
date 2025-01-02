@@ -4,6 +4,7 @@ import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import ConfirmDeleteModalU from '../confirmDeleteModalU/ConfirmDeleteModalU';
 import { useNavigate } from 'react-router-dom';
 import { IoArrowBackOutline } from "react-icons/io5";
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function TCTable() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function TCTable() {
             }
         
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories?workgroup_id=${workgroupId}`);
+                const response = await fetch(`${apiUrl}/ticket-categories?workgroup_id=${workgroupId}`);
                 const data = await response.json(); // Obtener los datos de la respuesta
                 console.log('Response data:', data); // Agregar este log para inspeccionar los datos
                 if (response.ok) {
@@ -46,7 +47,7 @@ export default function TCTable() {
 
     const confirmDelete = async () => {
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories/${categoryToDelete}`, {
+            const response = await fetch(`${apiUrl}/ticket-categories/${categoryToDelete}`, {
                 method: 'DELETE',
             });
 

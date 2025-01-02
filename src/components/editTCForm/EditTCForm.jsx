@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { IoArrowBackOutline } from "react-icons/io5";
 import './EditTCForm.css';
 import ConfirmDiscardChangesModal from '../confirmDiscardChangesModal/ConfirmDiscardChangesModal';
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function EditTCForm() {
     const { id } = useParams(); // Obtiene el ID de la categoría desde la URL
@@ -20,7 +21,7 @@ export default function EditTCForm() {
     useEffect(() => {
         const fetchCategory = async () => {
             try {
-                const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories/${id}`);
+                const response = await fetch(`${apiUrl}/ticket-categories/${id}`);
                 const data = await response.json();
                 if (response.ok) {
                     setFormData(data.data); // Cargar datos de la categoría
@@ -43,7 +44,7 @@ export default function EditTCForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://recgonback-8awa0rdv.b4a.run/ticket-categories/${id}`, {
+            const response = await fetch(`${apiUrl}/ticket-categories/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
