@@ -5,10 +5,12 @@ import { IoSettingsSharp, IoHelpBuoy } from "react-icons/io5";
 import { FaUserCircle, FaKey, FaDatabase } from "react-icons/fa";
 import { ImFilesEmpty } from "react-icons/im";
 import { IoIosLogOut } from "react-icons/io";
+import { useAuth } from "../../context/AuthProvider"; // Importa useAuth
 
 export default function ConfigDash() {
     const navigate = useNavigate(); // Inicializa useNavigate
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const { logout, user } = useAuth(); // Obtén logout y user del contexto
 
     const handleLogout = async () => {
         try {
@@ -21,7 +23,7 @@ export default function ConfigDash() {
                 // Eliminar cualquier dato de sesión del frontend
                 localStorage.removeItem('token');
                 localStorage.removeItem('user_id'); // Si guardas el ID del admin
-    
+                logout();
                 // Redirigir al usuario a la página de inicio de sesión
                 navigate('/');
             } else {

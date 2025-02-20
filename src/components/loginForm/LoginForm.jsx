@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FloatingLabel } from "flowbite-react";
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
+import { useAuth } from '../../context/AuthProvider';
 
 const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
@@ -12,6 +13,7 @@ export default function LoginForm() {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [attempts, setAttempts] = useState(0);
+    const { refreshAuth } = useAuth();
 
     // Validación de email
     const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
@@ -60,6 +62,7 @@ export default function LoginForm() {
             const data = await response.json();
             if (response.ok) {
                 // No guardamos datos sensibles en localStorage
+                await refreshAuth();
                 navigate('/dashboard');
             } else {
                 setAttempts(attempts + 1);
