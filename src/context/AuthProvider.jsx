@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -8,18 +9,24 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const token = localStorage.getItem("auth_token");
-        if (token) {
-            try {
-                const decoded = jwtDecode(token);
-                setUser(decoded); // Aquí guardas los datos del usuario
-            } catch (error) {
-                console.error("Error al decodificar el token:", error);
-                setUser(null);
+        console.log("Revisando autenticación...");
+      
+        fetch(`${apiUrl}/auth/me`, {
+          credentials: "include", // Para enviar cookies automáticamente
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.token) {
+              console.log("Token obtenido desde el backend con éxito.");
+              localStorage.setItem("authToken", data.token);
+            } else {
+              console.log("No se encontró token.");
             }
-        }
-        setLoading(false);
-    }, []);
+          })
+          .catch(error => console.error("Error obteniendo autenticación:", error));
+      }, []);
+      
+      
 
     const logout = () => {
         localStorage.removeItem("auth_token");
