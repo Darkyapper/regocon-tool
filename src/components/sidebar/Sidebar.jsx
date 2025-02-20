@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaCheckCircle, FaRegFile, FaChartPie } from "react-icons/fa";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { MdEvent, MdCollectionsBookmark } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
+import { jwtDecode } from "jwt-decode";
+
 
 export default function Sidebar() {
     const [isRegistroOpen, setIsRegistroOpen] = useState(false);
@@ -11,6 +13,15 @@ export default function Sidebar() {
     const [isUsuariosOpen, setIsUsuariosOpen] = useState(false);
     const [isEventosOpen, setIsEventosOpen] = useState(false);
     const [isEquipoOpen, setIsEquipoOpen] = useState(false);
+
+    const [adminId, setAdminId] = useState(null);
+
+    useEffect(() => {
+        const userId = localStorage.getItem("user_id"); // Obtiene el ID del usuario desde localStorage
+        if (userId) {
+            setAdminId(userId);
+        }
+    }, []);
 
     const toggleRegistroMenu = () => {
         setIsRegistroOpen(!isRegistroOpen);
@@ -51,8 +62,6 @@ export default function Sidebar() {
         setIsUsuariosOpen(false);
         setIsEventosOpen(false);
     };
-
-    const adminId = localStorage.getItem('user_id'); // Obtener el ID del administrador
 
     return (
         <div>
@@ -260,7 +269,7 @@ export default function Sidebar() {
                                 </li>
                                 <li>
                                     <Link
-                                        to={`/profile/${localStorage.getItem('user_id')}`} // Cambiar a redirigir al perfil del administrador actual
+                                        to={adminId ? `/profile/${adminId}` : "#"}
                                         className="flex items-center w-full p-2 text-text dark:text-dark-text transition duration-75 rounded-lg pl-11 group hover:bg-select dark:hover:bg-dark-select"
                                     >
                                         Mi Perfil

@@ -10,26 +10,38 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         console.log("Revisando autenticación...");
-      
+
         fetch(`${apiUrl}/auth/me`, {
-          credentials: "include", // Para enviar cookies automáticamente
+            credentials: "include", // Para enviar cookies automáticamente
         })
-          .then(response => response.json())
-          .then(data => {
-            if (data.token) {
-              console.log("Token obtenido desde el backend con éxito.");
-              localStorage.setItem("authToken", data.token);
-            } else {
-              console.log("No se encontró token.");
-            }
-          })
-          .catch(error => console.error("Error obteniendo autenticación:", error));
-      }, []);
-      
-      
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    console.log("Token obtenido desde el backend con éxito.");
+                    localStorage.setItem("authToken", data.token);
+
+                    try {
+                        // Decodificar el token y extraer user_id
+                        const decoded = jwtDecode(data.token);
+                        if (decoded.id) {
+                            console.log("User ID obtenido del token:", decoded.id);
+                            localStorage.setItem("user_id", decoded.id);
+                            setUser(decoded); // Guardar usuario en el estado
+                        }
+                    } catch (error) {
+                        console.error("Error al decodificar el token:", error);
+                    }
+                } else {
+                    console.log("No se encontró token.");
+                }
+            })
+            .catch(error => console.error("Error obteniendo autenticación:", error))
+            .finally(() => setLoading(false));
+    }, []);
 
     const logout = () => {
-        localStorage.removeItem("auth_token");
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("user_id");
         setUser(null);
     };
 
