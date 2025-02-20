@@ -78,7 +78,7 @@ export default function RegisterTicketForm() {
                 workgroup_id: workgroup_id // Incluir workgroup_id
             };
             ticketPromises.push(
-                fetch('${apiUrl}/tickets', {
+                fetch(`${apiUrl}/tickets`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

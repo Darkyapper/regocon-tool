@@ -4,16 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.register-event-form {
-    font-family: 'Noto Sans', sans-serif;
+:root {
+    --text: #040316;
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dddbff;
+    --accent: #443dff;
+}
+
+.dark {
+    --text: #eae9fc;
+    --background: #010104;
+    --primary: #3a31d8;
+    --secondary: #020024;
+    --accent: #0600c2;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
 }
 
 .register-event-form .custom-wawa {
-    font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.sumbit-custom{
+.sumbit-custom {
     font-weight: 500;
 }

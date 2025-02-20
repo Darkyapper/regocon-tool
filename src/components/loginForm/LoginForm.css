@@ -4,61 +4,80 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text: #040316;
+  --background: #fbfbfe;
+  --primary: #2f27ce;
+  --secondary: #dddbff;
+  --accent: #443dff;
+}
+
+.dark {
+  --text: #eae9fc;
+  --background: #010104;
+  --primary: #3a31d8;
+  --secondary: #020024;
+  --accent: #0600c2;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
 .main-container {
-    padding-top: 6rem;
+  padding-top: 6rem;
 }
 
 form {
-    margin-top: 0;
-    background-color: #1F2937;
-    color: rgb(255, 255, 255);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 12px 26px 5px rgba(0, 0, 0, 0.25);
-    font-family: 'Noto Sans', sans-serif;
+  margin-top: 0;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 12px 26px 5px rgba(0, 0, 0, 0.25);
+  font-family: 'Noto Sans', sans-serif;
 }
-form .info-form{
-    margin-bottom: 1.5rem;
+
+.dark form {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+form .info-form {
+  margin-bottom: 1.5rem;
 }
 
 form .title-form {
-    text-align: center;
-    font-family: "Poppins";
-    font-size: 2.2rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.just-it-a{
-    text-align: center;
-    margin-top: 2rem;
-    color: #DD8329;
-    text-decoration:underline;
-}
-
-.pics-as{
-    justify-content: center;
-    text-align: center;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 form .description-form {
-    text-align: center;
-    font-family: "Noto Sans";
-    font-size: 0.85rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text);
 }
 
-form .button-to-access{
-    justify-content: center;
-    display: flex;
-    margin-top: 1rem;
+form .button-to-access {
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
 }
 
-/*ESTO CAMBIA EL COLOR DEL TEXTO DENTRO DEL INPUT*/
-form input {
-    color: black; /* Cambia el color del texto dentro del input a negro */
+.just-it-a {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
+.dark .just-it-a {
+  color: var(--primary);
+}
+
+.pics-as {
+  text-align: center;
+  color: var(--text);
+}

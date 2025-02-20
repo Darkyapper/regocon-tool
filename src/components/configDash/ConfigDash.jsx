@@ -8,13 +8,30 @@ import { IoIosLogOut } from "react-icons/io";
 
 export default function ConfigDash() {
     const navigate = useNavigate(); // Inicializa useNavigate
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-    const handleLogout = () => {
-        // Eliminar el token del almacenamiento local
-        localStorage.removeItem('token'); // Cambia 'token' al nombre que estés usando
-        // Redirigir a la página de inicio de sesión
-        navigate('/'); // Asegúrate de que esta ruta sea la correcta
+    const handleLogout = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/logout`, {
+                method: 'POST',
+                credentials: 'include', // Importante para que se envíen las cookies
+            });
+    
+            if (response.ok) {
+                // Eliminar cualquier dato de sesión del frontend
+                localStorage.removeItem('token');
+                localStorage.removeItem('user_id'); // Si guardas el ID del admin
+    
+                // Redirigir al usuario a la página de inicio de sesión
+                navigate('/');
+            } else {
+                console.error('Error al cerrar sesión');
+            }
+        } catch (error) {
+            console.error('Error de conexión:', error);
+        }
     };
+    
 
     const handleSettings = () => {
         // Redirigir a la página de configuración

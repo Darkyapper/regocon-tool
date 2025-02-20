@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-navbar{
-    background-color: #1F2937;
-}
-
 .custom-navbar .custom-logo{
     width: 11rem;
+    filter : invert(1);
+}
+
+.dark .custom-navbar .custom-logo{
+    filter: invert(0);
 }
 
 .custom-navbar .custom-icons{
-    color: #EDEDED;
+    color: var(--accent);
+}
+
+.dark .custom-navbar .custom-icons{
+    color: var(--text);
 }
 
 .custom-navbar .custom-icons svg {

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/navbar/Navbar'
-import Sidebar from '../components/sidebar/Sidebar'
-import RegisterTable from '../components/registerTable/RegisterTable'
+import Navbar from '../components/navbar/Navbar';
+import Sidebar from '../components/sidebar/Sidebar';
 
-
-export default function DashAdmRegister() {
+export default function EventsPage() {
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; // Obtiene la URL del backend desde .env
 
     const navigate = useNavigate();
@@ -66,9 +64,9 @@ export default function DashAdmRegister() {
             <div className="flex flex-grow">
                 <Sidebar />
                 <div className="flex-grow ml-64 p-4 mt-16">
-                    <RegisterTable />
+                    
                 </div>
             </div>
         </div>
-    )
+    );
 }

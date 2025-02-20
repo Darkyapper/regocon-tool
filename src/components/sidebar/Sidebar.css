@@ -2,12 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.custom-sidebar {
-    background-color: #3C1659;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-.custom-sidebar a {
-    color: #EDEDED;
-}

@@ -1,7 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+.noto-font {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
+}
+
 :root {
-    background-color: #111827;
+  --text: #040316;
+  --background: #fbfbfe;
+  --primary: #2f27ce;
+  --secondary: #dddbff;
+  --accent: #443dff;
+  --cards: #F3F3F6;
+  --select: #EBEBEE;
+}
+
+.dark {
+  --text: #eae9fc;
+  --background: #010104;
+  --primary: #3a31d8;
+  --secondary: #020024;
+  --accent: #0600c2;
+  --cards: #09090C;
+  --select: #111114;
+}
+
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  /* Fuente por defecto */
 }

@@ -30,6 +30,7 @@ import MyWorkGroup from './pages/MyWorkGroup';
 import ProfilePage from './pages/ProfilePage';
 import Stadistic from './pages/Stadistic';
 import NoWebCont from './pages/NoWebCont';
+import EventsPage from './pages/EventsPage';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path="/app/configuration" element={<NoWebCont />} /> //CAMBIAR RUTA A FUTURO
         <Route path="/app/database" element={<NoWebCont />} /> //CAMBIAR RUTA A FUTURO
         <Route path="*" element={<NotFound />} />
+        <Route path="/events/page" element={<EventsPage />} />
       </Routes>
     </Router>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import './DashboardAHome.css';
 import { FiFilePlus, FiCheckCircle } from "react-icons/fi";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
+import { BsFillCalendar2PlusFill } from "react-icons/bs"; 
 import { useNavigate } from 'react-router-dom';
 
 export default function DashboardAHome() {
@@ -9,8 +10,8 @@ export default function DashboardAHome() {
     const navigate = useNavigate();
 
     const handleActionClick = (action) => {
-        if (action === 'Registrar Asistencia') {
-            navigate('/register/add');
+        if (action === 'Pagina') {
+            navigate('/events/page');
         }
         else if (action === 'Validar Asistencia') {
             navigate('/attendance-validation');
@@ -35,21 +36,21 @@ export default function DashboardAHome() {
 
     return (
         <div className="custom-content p-4">
-            <h1 className="title-c text-2xl font-bold mb-4">{getGreeting()}</h1>
-            <h2 className="text-lg mb-4">Acciones Rápidas</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <h1 className="text-text dark:text-dark-text text-3xl poppins-font font-bold mb-4">{getGreeting()}</h1>
+            <h2 className="text-lg mb-4 text-text dark:text-dark-text noto-font">Acciones Rápidas</h2>
+            <div className="grid grid-cols-3 gap-4 poppins-font">
                 <div
-                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
-                    onClick={() => handleActionClick('Registrar Asistencia')}
+                    className="group transition-transform transform hover:scale-105 duration-300 ease-in-out font-medium bg-primary dark:bg-dark-primary p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    onClick={() => handleActionClick('Crear Evento')}
                 >
-                    <h3 className="button-t-c">Pre Registro</h3>
+                    <h3 className="button-t-c">Crear Nuevo Evento</h3>
                     <div className="flex justify-center items-center">
-                        <FiFilePlus className="icon-custom w-16 h-16" />
+                        <BsFillCalendar2PlusFill className="icon-custom w-16 h-16" />
                     </div>
                 </div>
 
                 <div
-                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    className="group transition-transform transform hover:scale-105 duration-300 ease-in-out font-medium bg-primary dark:bg-dark-primary p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
                     onClick={() => handleActionClick('Validar Asistencia')}
                 >
                     <h3 className="button-t-c">Validar Asistencia</h3>
@@ -58,10 +59,10 @@ export default function DashboardAHome() {
                     </div>
                 </div>
                 <div
-                    className="button-custom bg-[#DD8329] p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
-                    onClick={() => handleActionClick('Crear Evento')}
+                    className="group transition-transform transform hover:scale-105 duration-300 ease-in-out font-medium bg-primary dark:bg-dark-primary p-4 rounded-lg shadow-md text-white text-center cursor-pointer"
+                    onClick={() => handleActionClick('Pagina')}
                 >
-                    <h3 className="button-t-c">Crear Evento</h3>
+                    <h3 className="button-t-c">Editar Página</h3>
                     <div className="flex justify-center items-center">
                         <HiOutlinePencilSquare className="icon-custom w-16 h-16" />
                     </div>

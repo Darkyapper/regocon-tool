@@ -5,14 +5,11 @@
 @tailwind utilities;
 
 .recommended-actions{
-    font-family: 'Not Sans', sans-serif;
     font-size: 1.5rem;
-    color: #ffffff;
 }
 
 .recommended-actions .action-button {
-    background-color: #DD8329;
-    color: white;
+    background-color: var(--accent);
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -22,6 +19,12 @@
     text-align: center;
 }
 
+.dark .recommended-actions .action-button {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
 .recommended-actions .action-button:hover {
-    background-color: #bf7021;
+    background-color: var(--secondary);
+    color: var(--text);
 }

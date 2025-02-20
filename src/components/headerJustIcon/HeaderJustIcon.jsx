@@ -5,7 +5,7 @@ import logo from '../../assets/regcon-tool-logo-white.png'
 export default function HeaderJustIcon() {
     return (
         <div>
-            <nav className="custom-header  fixed w-full z-20 top-0 start-0">
+            <nav className="border-b border-gray-200 dark:border-gray-600 custom-header bg-background dark:bg-dark-cards fixed w-full z-20 top-0 start-0">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src={logo} className="custom-logo" alt="RegCon Logo"/>
