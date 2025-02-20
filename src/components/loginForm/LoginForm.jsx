@@ -82,7 +82,7 @@ export default function LoginForm() {
     return (
         <div className={`main-container ${isLoading ? 'cursor-wait' : ''}`}>
             <div className='custom-form'>
-                <form className="max-w-sm mx-auto bg-cards dark:bg-dark-cards text-text dark:text-dark-text shadow-2xl p-6 rounded-lg"
+                <form className="poppins-font   max-w-sm mx-auto bg-cards dark:bg-dark-cards text-text dark:text-dark-text shadow-2xl p-6 rounded-lg"
                     onSubmit={handleSubmit}
                 >
                     <div className="info-form">
@@ -91,7 +91,7 @@ export default function LoginForm() {
                             Ingrese los datos con los que se registró en RegCon™ o los proporcionados por su administrador.
                         </p>
                     </div>
-                    {error && <p className="text-red-500 dark:text-red-400 mb-5">{error}</p>}
+                    {error && <p className="text-center text-red-500 dark:text-red-400 mb-5">{error}</p>}
                     <div className="mb-5">
                         <FloatingLabel
                             variant="outlined"
