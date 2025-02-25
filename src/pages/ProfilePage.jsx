@@ -3,11 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import UserProfile from '../components/userProfile/UserProfile';
+import { useAuth } from '../context/AuthProvider'; // Importa el contexto
 
 export default function ProfilePage() {
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
     const { id } = useParams();
+    const { workgroupId } = useAuth(); // Obtener workgroup_id desde el contexto
     const [isAuthenticated, setIsAuthenticated] = useState(null);
 
     useEffect(() => {
@@ -15,7 +17,7 @@ export default function ProfilePage() {
             try {
                 const response = await fetch(`${API_BASE_URL}/auth/status`, {
                     method: 'GET',
-                    credentials: 'include', // Importante para enviar cookies
+                    credentials: 'include',
                 });
 
                 const data = await response.json();
@@ -65,7 +67,7 @@ export default function ProfilePage() {
             <div className="flex flex-grow">
                 <Sidebar />
                 <div className="flex-grow ml-64 p-4 mt-16">
-                    <UserProfile id={id} />
+                    <UserProfile id={id} workgroupId={workgroupId} />
                 </div>
             </div>
         </div>

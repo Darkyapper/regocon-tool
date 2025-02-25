@@ -33,5 +33,6 @@ module.exports = {
   },
   plugins: [
     flowbite.plugin(),
+    require('flowbite-typography'),
   ],
 };

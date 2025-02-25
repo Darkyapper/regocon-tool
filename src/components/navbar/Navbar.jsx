@@ -12,7 +12,7 @@ export default function Navbar() {
 
     // Obtener datos del administrador
     const adminId = localStorage.getItem('user_id');
-    const adminPicture = localStorage.getItem('admin_picture') || 'https://pbs.twimg.com/media/Gbmg1syWgAAcmGW?format=png&name=360x360';
+    const adminPicture = localStorage.getItem('admin_picture') || 'https://i.ibb.co/d03Qhhpq/user-profile.jpg';
 
     // Efecto para aplicar la clase `dark` al <html>
     useEffect(() => {

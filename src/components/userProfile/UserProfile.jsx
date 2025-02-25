@@ -11,10 +11,21 @@ export default function UserProfile({ id }) {
     }, [id]);
 
     const fetchUserProfile = async () => {
+        const workgroupId = localStorage.getItem('workgroup_id'); // Obtener workgroup_id
+
+        if (!workgroupId) {
+            setError('No se encontró el workgroup_id');
+            return;
+        }
+
         try {
             const response = await fetch(`${apiUrl}/admin/${id}`, {
                 method: 'GET',
-                credentials: 'include', // Enviar cookies en la solicitud
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Workgroup-Id': workgroupId // Enviar workgroup_id en los headers
+                }
             });
 
             const data = await response.json();

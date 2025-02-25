@@ -32,6 +32,7 @@
   import Stadistic from './pages/Stadistic';
   import NoWebCont from './pages/NoWebCont';
   import EventsPage from './pages/EventsPage';
+  import NewZAccount from './pages/NewZAccount';
 
   function App() {
     return (
@@ -71,6 +72,7 @@
             <Route path="/app/database" element={<NoWebCont />} /> //CAMBIAR RUTA A FUTURO
             <Route path="*" element={<NotFound />} />
             <Route path="/events/page" element={<EventsPage />} />
+            <Route path="/new-account" element={<NewZAccount />} />
           </Routes>
         </Router>
       </AuthProvider>
