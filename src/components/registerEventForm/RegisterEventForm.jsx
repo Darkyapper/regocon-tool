@@ -9,9 +9,9 @@ export default function RegisterEventForm() {
         location: '',
         description: '',
         workgroup_id: '',
-        image: '',
         event_category_id: '',
-        is_online: false
+        is_online: false,
+        credits_type: 'prepaid'
     });
 
     const [eventCategories, setEventCategories] = useState([]);
@@ -75,9 +75,9 @@ export default function RegisterEventForm() {
                     location: '',
                     description: '',
                     workgroup_id: '',
-                    image: '',
                     event_category_id: '',
-                    is_online: false
+                    is_online: false,
+                    credits_type: ''
                 });
             } else {
                 alert(data.error || 'Error al crear el evento');
@@ -200,6 +200,19 @@ export default function RegisterEventForm() {
                             <span className='text-text dark:text-dark-text'>Marque esta casilla si su evento se realizará de forma virtual.</span>
                         </div>
                     </div>
+                </div>
+                <div className='mb-4'>
+                    <label for="credits_type" className=" block text-base font-regular dark:text-dark-text text-text mb-2t">Selecciona un tipo de crédito</label>
+                    <p className='mb-2 text-sm noto-font font-normal text-text dark:text-dark-text'>Elije como quieres configurar la creación de tus boletos para este evento. Esta configuración no puede cambiarse una vez creado el evento.</p>
+                    <select id="credits_type"
+                        className="credits_type bg-gray-50 border border-gray-300 text-text text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark-text dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        onChange={handleChange}
+                        required
+                    >
+                        <option value="">Seleccione un tipo</option>
+                        <option value="prepaid">Prepago</option>
+                        <option value="postpaid">Postpago</option>
+                    </select>
                 </div>
                 <button
                     type="submit"

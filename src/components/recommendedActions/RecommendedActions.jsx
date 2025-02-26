@@ -20,7 +20,7 @@ export default function RecommendedActions() {
 
     return (
         <div className="recommended-actions noto-font text-text p-4 rounded-lg">
-            <h2 className="text-lg text-text dark:text-dark-text mb-4">Acciones Recomendadas</h2>
+            <h2 className="text-lg text-text dark:text-dark-text mb-2">Acciones Recomendadas</h2>
             <div className="grid grid-cols-2 gap-4">
                 <button onClick={() => selectActionClic('Crear boletos nuevos')} className="action-button">
                     Crear boletos nuevos
