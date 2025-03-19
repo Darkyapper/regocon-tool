@@ -5,6 +5,8 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { MdEvent, MdCollectionsBookmark } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { jwtDecode } from "jwt-decode";
+import { RiStoreFill } from "react-icons/ri";
+import { RiTokenSwapFill } from "react-icons/ri";
 
 
 export default function Sidebar() {
@@ -82,9 +84,9 @@ export default function Sidebar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/attendance-validation" className="flex items-center p-2 text-text dark:text-dark-text rounded-lg hover:bg-select dark:hover:bg-dark-select group">
-                                <FaCheckCircle className="w-5 h-5" />
-                                <span className="ms-3">Validar Asistencia</span>
+                            <Link to="/ticket-office-mode" className="flex items-center p-2 text-text dark:text-dark-text rounded-lg hover:bg-select dark:hover:bg-dark-select group">
+                                <RiStoreFill className="w-5 h-5"/>
+                                <span className="ms-3">Modo Taquilla</span>
                             </Link>
                         </li>
                         <li>
@@ -133,8 +135,8 @@ export default function Sidebar() {
                                 className="flex items-center w-full p-2 text-base text-text dark:text-dark-text transition duration-75 rounded-lg group hover:bg-select dark:hover:bg-dark-select"
                                 onClick={toggleBoletosMenu}
                             >
-                                <FaRegFile className="w-5 h-5" />
-                                <span className="flex-1 ms-3 text-left whitespace-nowrap">Boletos</span>
+                                <RiTokenSwapFill className="w-5 h-5" />
+                                <span className="flex-1 ms-3 text-left whitespace-nowrap">Créditos</span>
                                 <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
                                 </svg>
@@ -234,14 +236,6 @@ export default function Sidebar() {
                                         className="flex items-center w-full p-2 text-text dark:text-dark-text transition duration-75 rounded-lg pl-11 group hover:bg-select dark:hover:bg-dark-select"
                                     >
                                         Crear Eventos
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/events/page"
-                                        className="flex items-center w-full p-2 text-text dark:text-dark-text transition duration-75 rounded-lg pl-11 group hover:bg-select dark:hover:bg-dark-select"
-                                    >
-                                        Páginas de Eventos
                                     </Link>
                                 </li>
                             </ul>

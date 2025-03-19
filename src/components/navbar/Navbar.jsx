@@ -41,9 +41,6 @@ export default function Navbar() {
                     <button className="notis hover:text-secondary dark:hover:text-dark-accent">
                         <FaBell />
                     </button>
-                    <button className="notis hover:text-secondary dark:hover:text-dark-accent">
-                        <FaCheck />
-                    </button>
 
                     {/* Botón de cambio de tema */}
                     <button
