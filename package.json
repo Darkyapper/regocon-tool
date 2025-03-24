@@ -17,6 +17,7 @@
     "chart.js": "^4.4.6",
     "flowbite-react": "^0.10.2",
     "flowbite-typography": "^1.0.5",
+    "framer-motion": "^12.5.0",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
     "jwt-decode": "^4.0.0",

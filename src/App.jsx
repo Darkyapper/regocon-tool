@@ -33,6 +33,7 @@ import Stadistic from './pages/Stadistic';
 import NoWebCont from './pages/NoWebCont';
 import EventsPage from './pages/EventsPage';
 import NewZAccount from './pages/NewZAccount';
+import Landing from './pages/Landing';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<DashboardHome />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/login" element={<LogInPage />} />
           <Route path="/dashboard" element={<DashboardHome />} />
           <Route path="/settings" element={<DashboardSettings />} />
